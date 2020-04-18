@@ -1,0 +1,131 @@
+/* <i class="far fa-check-circle"></i> */
+/* IMPORT FONT STYLE */
+@import url("https://fonts.googleapis.com/css?family=Comic+Neue:300,400&display=swap");
+/* RESET STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* COLOR PALETTE */
+:root {
+  --var-color-fontW: #fff;
+  --var-color-bg-content: #91e7e7;
+  --var-color-input: #6e6a6a;
+}
+/* GENERAL STYLE */
+html {
+  height: 100%;
+}
+body {
+  font-family: "Comic Neue", cursive;
+  height: 100%;
+}
+.container {
+  max-width: 550px;
+  height: 100vh;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+input {
+  border: none;
+}
+/* HEADER */
+header {
+  background-image: url("https://i.ibb.co/gWCDTdh/T-3-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 30%;
+  border-radius: 10px 10px 0 0;
+  color: var(--var-color-fontW);
+  padding: 1rem;
+}
+#icon-clear {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: rotate ease 0.3s;
+}
+#icon-clear:hover {
+  rotate: 360deg;
+}
+.clear {
+  text-align: end;
+  height: 50%;
+}
+
+#date {
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* CONTENT */
+.content {
+  padding: 1rem;
+  background-color: var(--var-color-bg-content);
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--var-color-fontW);
+  margin-left: 0.7rem;
+}
+.item:hover {
+  cursor: pointer;
+}
+.item .text {
+  text-align: left;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.add-item {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+}
+.add-item i {
+  color: var(--var-color-fontW);
+}
+.add-item input {
+  width: 100%;
+  height: 10%;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--var-color-input);
+  border-radius: 5px;
+}
+.add-item i:hover {
+  background-color: var(--var-color-fontW);
+  color: var(--var-color-bg-content);
+  border-radius: 50%;
+  cursor: pointer;
+  /* transition: all ease-in 0.1s; */
+}
+.lineThrough {
+  text-decoration: line-through;
+}
+.item-checked {
+  opacity: 0.5;
+}
+.delete:hover,
+.complete:hover {
+  font-weight: 900;
+}
