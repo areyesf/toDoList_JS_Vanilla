@@ -135,6 +135,9 @@ header {
   .item{
     font-size: 1rem;
   }
+  .date{
+    font-size: 1rem;
+  }
 }
 .error{
   text-align: center;
