@@ -73,7 +73,6 @@ header {
   background-color: var(--var-color-bg-content);
   width: 100%;
 }
-
 .item {
   display: flex;
   justify-content: space-between;
@@ -128,4 +127,12 @@ header {
 .delete:hover,
 .complete:hover {
   font-weight: 900;
+}
+@media(max-width: 550px){
+  .content{
+    height: 100%;
+  }
+  .item{
+    font-size: 1rem;
+  }
 }
