@@ -136,3 +136,8 @@ header {
     font-size: 1rem;
   }
 }
+.error{
+  text-align: center;
+  color: rgba(188, 56, 56,0.7);
+  font-weight: bold;
+}

@@ -4,6 +4,7 @@ const dateElement = document.querySelector(".date");
 const listElement = document.getElementById("list");
 const inputElement = document.getElementById("input");
 const btnAddElement = document.getElementById("btn-add");
+const errorElement = document.querySelector(".error");
 
 //EventListeners
 clearElemnet.addEventListener("click", clear);
@@ -89,8 +90,13 @@ function createItem(itemName, id, done, trash) {
 
 //add and update the list
 function updateList(e) {
+  const inputValue = inputElement.value;
+  if (inputValue.trim() === "") {
+    errorElement.innerHTML = "Ingrese una tarea";
+    return;
+  }
+
   if (e.keyCode == 13 || e.type == "click") {
-    const inputValue = inputElement.value;
     list.push({
       name: inputValue,
       id: id,
@@ -102,6 +108,7 @@ function updateList(e) {
     inputElement.focus();
     updateLocalStore();
     loadList();
+    errorElement.innerHTML = "";
   }
 }
 
